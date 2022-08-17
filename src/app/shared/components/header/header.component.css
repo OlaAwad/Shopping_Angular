@@ -1,0 +1,17 @@
+nav{
+    background-color: #38547B ;
+}
+nav .nav-item a{
+    color: white !important;
+}
+.navbar-brand{
+    color: #DB706D !important;
+    cursor: pointer;
+}
+.links{
+    width: 15%;
+    justify-content: space-around;
+}
+.cart {
+    position: relative;
+}

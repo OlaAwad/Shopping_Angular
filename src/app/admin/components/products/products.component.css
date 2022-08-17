@@ -1,0 +1,29 @@
+table img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 120px;
+    min-height: 120px;
+}
+
+.modal img{
+    width: 100%;
+    max-height: 85px;
+}
+table{
+    color: #38547B;
+}
+.add{
+    background-color: #38547B;
+    color: white;
+    margin-top: 90px;
+}
+.addPrd{
+    background-color: #38547B;
+    color: white;
+}

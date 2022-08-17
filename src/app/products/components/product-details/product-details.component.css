@@ -1,0 +1,13 @@
+.box{
+    width: 90%;
+    margin: 100px auto;
+    height: 500px;
+}
+ul li{
+    font-size: 22px;
+    margin: 20px 0;
+    color:#38547B;
+}
+strong{
+    color: #e67779;
+}

@@ -1,0 +1,15 @@
+.all{
+    margin-top: 70px;
+}
+.accordion-flush .accordion-item .accordion-button{
+    color: #DB706D ;
+    font-weight: bold;
+}
+
+.summary{
+    color: #DB706D;
+}
+table{
+    color: #38547B !important;
+
+}

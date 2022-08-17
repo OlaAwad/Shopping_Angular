@@ -1,0 +1,90 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn add " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add new product
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="form">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Title</label>
+                    <input type="text" class="form-control" placeholder="title" formControlName="title">
+                </div>
+                <div class="col-md-2">
+                    <label for="">Price</label>
+                    <input type="number" class="form-control" placeholder="price" formControlName="price">
+                </div>
+                <div class="col-md-2">
+                    <label for="">Stock</label>
+                    <input type="number" class="form-control" placeholder="stock" formControlName="stock">
+                </div>
+                <div class="col-md-4">
+                    <label for="">Category</label>
+                    <select class="form-control" (change)="getSelectedCategory($event)">
+                        <option value="{{ option }}" *ngFor="let option of categories" [selected]="option==select">
+                          {{ option }}
+                        </option>
+                      </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="">Image</label>
+                    <img src="{{base64}}" alt="">
+                    <input type="file" (change)="getImgPath($event)">
+                </div>
+                <div class="col-md-8">
+                    <label for="">Description</label>
+                    <textarea class="form-control" placeholder="Type here..." formControlName="description"></textarea>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button class="btn addPrd" (click)="addProduct()"  [disabled]="!form.valid">Add Product</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="table-responsive">
+  <table class="table table-striped mt-4">
+    <thead>
+        <tr class="text-center">
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <!-- <th>Update</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products;" class="text-center">
+            <td class="w-25">
+                <img src="{{item.thumbnail}}"  alt="" class="img-fluid">
+            </td>
+            <td>{{item.title}}</td>
+            <td>{{item.category}} </td>          
+            <td>{{item.price}} $</td>  
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            
+        </tr>
+    </tfoot>
+  </table>
+
+</div>
+
+ 

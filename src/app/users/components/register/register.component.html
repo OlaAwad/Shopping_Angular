@@ -1,0 +1,40 @@
+<div class="row all justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="sm-jumbotron text-center">
+                <h3>User Regestration</h3>
+                <div class="alert alert-danger" *ngIf="errorMsg">
+                    {{errorMsg}}
+                </div>
+                <!-- reactive form -->
+                <form class="col bg-light p-5" [formGroup]="registerForm" (ngSubmit)="submitRegisterForm(registerForm)">
+                        <div class="input-field col-md-8 offset-2">
+                            <input type="email" formControlName="email"   class="form-control" placeholder="email">
+                        </div>
+                        
+                        <div class="col-md-8 offset-2 input-field">
+                            <input type="password" formControlName="password"   placeholder="password" class="form-control">
+                        </div>
+                    
+                        <div class="col-md-8 offset-2 input-field">
+                            <input type="text" class="form-control" formControlName="first_name" placeholder="first name">
+                        </div>
+                        <div class="col-md-8 offset-2 input-field">
+                            
+                            <input type="text" formControlName="last_name"   class="form-control" placeholder="last name">
+                        </div>
+                    <div class="row mt-5">
+                        <div class="input-field col-4 offset-4">
+                            <button class="btn btn-submit btn-lg" type="submit">
+                                <span *ngIf="isLoading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </span>
+                                <span *ngIf="!isLoading">Register</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

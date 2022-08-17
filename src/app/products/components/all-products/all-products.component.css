@@ -1,0 +1,36 @@
+.box{
+    margin-top: 70px !important;
+}
+.item{
+    min-height: 500px;
+    color: #38547B ;
+    background-color: rgba(56, 84, 123, 0.1);
+    cursor: pointer;
+}
+.item img{
+    height: 250px;
+    transition: transform 0.5s;
+}
+.imgContainer{
+    overflow: hidden;
+}
+.item img:hover{
+    transform: scale(1.1);
+}
+.replace{
+    margin-top: 1rem;
+}
+label{
+    color: #DB706D;
+    font-weight: bold;
+}
+option, select{
+    color: #38547B;
+}
+.rating{
+    color: #DB706D;
+}
+.add{
+    background-color: #38547B;
+    color: white;
+}
