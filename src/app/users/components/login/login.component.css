@@ -17,7 +17,6 @@ input{
 button.btn-submit{
     background-color: #38547b;
     color: white;
-    width: 100%;
 }
 
 button.btn-submit:focus, button.btn-submit:hover{
