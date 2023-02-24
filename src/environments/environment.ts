@@ -3,10 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  baseApi:'https://dummyjson.com/',
-  baseAuthApi:'https://route-egypt-api.herokuapp.com/',
-  production: false
-};
+  baseApi: 'https://dummyjson.com/',
+  // baseAuthApi:'https://route-egypt-api.herokuapp.com/',
+  baseAuthApi: 'https://route-movies-api.vercel.app/',
+  production: false,
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
